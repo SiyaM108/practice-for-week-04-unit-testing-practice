@@ -5,6 +5,10 @@ function isFive(num) {
 
 function isOdd(number) {
   // Your code here
+  if (typeof number !== 'number' || !Number.isInteger(number)) {
+    return false;
+  }
+  return Math.abs(number % 2) === 1;
 }
 
 function myRange(min, max, step = 1) {
