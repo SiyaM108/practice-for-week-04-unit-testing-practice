@@ -13,6 +13,14 @@ function isOdd(number) {
 
 function myRange(min, max, step = 1) {
   // Your code here
+  const rangeArray = [];
+  if (step <= 0) {
+    return rangeArray;
+  }
+  for (let i = min; i < max; i += step) {
+    rangeArray.push(i);
+  }
+  return rangeArray;
 }
 
 
