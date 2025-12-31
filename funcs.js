@@ -1,5 +1,6 @@
 function isFive(num) {
   // Your code here
+  return num === 5;
 }
 
 function isOdd(number) {
