@@ -5,10 +5,12 @@ function isFive(num) {
 
 function isOdd(number) {
   // Your code here
-  if (typeof number !== 'number' || !Number.isInteger(number)) {
-    return false;
+  // throw an error if num is not of type Number
+  if (typeof number !== 'number') {
+    throw new Error('Input must be a number');
   }
-  return Math.abs(number % 2) === 1;
+  return number % 2 !== 0;
+
 }
 
 function myRange(min, max, step = 1) {
@@ -17,7 +19,7 @@ function myRange(min, max, step = 1) {
   if (step <= 0) {
     return rangeArray;
   }
-  for (let i = min; i < max; i += step) {
+  for (let i = min; i <= max; i += step) {
     rangeArray.push(i);
   }
   return rangeArray;
